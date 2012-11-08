@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8" />
+        <title>My WebApp</title>
+
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="http://code.jquery.com/ui/1.9.0/themes/base/jquery-ui.css">
+
+<!--    Load standard jQuery package  (either local or remote copy)           
+        <script src="js/vendor/jquery-1.8.2.min.js"></script>      
+-->
+        <script src="http://code.jquery.com/jquery-latest.js"></script>
+        
+<!--    Load jQuery user interface widgets       -->
+        <script src="http://code.jquery.com/ui/1.9.0/jquery-ui.js"></script>
+
+<!--    Load my javascript modules       -->
+        <script src="js/utils/string.js"></script>
+        <script src="js/utils/debug.js"></script>
+        <script src="js/main.js"></script>
+
+   </head>
+   
+    <body>
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
+        <![endif]-->
+
+        <!-- Add your site or application content here -->
+      <div id="sandbox">
+        <div style="height:2em;padding:0px;margin:0px">
+          <p id="hidetext">Hello world - click on this text and it will wobble then disappear</p>
+          <p></p>
+        </div>
+
+        <p id="date"><span id="mytest" color="blue">Bob </span>02-OCT-12</p>
+        <button id=mybutton onclick="doSomething(event)">Do Something</button>
+        
+
+      </div> <!-- sandbox -->
+
+        <div id="fadingtext">
+          <div id="fadeslider">
+            <div id="vertslider">
+            </div>
+          </div>
+          <div id="fadedisplay">
+            <p id="fading">Fade this text using the vertical slider</p>
+            <label for="myvalue">opacity:</label>
+            <input type="text" id="myvalue"  class="output" style="border: 0; font-weight: bold;" value="100"/>
+          </div>
+        </div> <!-- fadingtext -->
+        
+        <div id="movingtext">
+          <div id="movedisplay")>  
+            <p id="moveabletext">move this text using the slider</p>
+          </div>
+            <br><br>
+            <div id="moveslider">
+              <div id="horizslider" >
+              </div>
+            </div>
+        </div> <!-- movingtext -->
+
+      <br>
+      
+      <div id="search">
+        <div id="searchinputform">
+          <h2>Search</h2>
+          <form id="searchform">
+              <label class="input" style="float:left">search for:</label>
+              <input type="text" name="searchtext" id="searchtext"  style="float:left" value="">
+              <button id="searchbutton" style="float:left;height:2.3em;" onclick="mySearch(event)">search</button>
+          </form>
+        </div> <!-- searchinputform -->
+        <div id="searchoutputdisplay">
+          <p>Result: <span id="searchresult" style="color:teal"></span></p>
+          <p>Title: <span id="searchtitle"  style="color:blue"></span></p>
+          <p>Content: <span id="searchcontent" style="color:blue"></span></p>
+        </div> <!-- searchoutputdisplay -->
+      </div> <!-- search -->
+
+      <br>
+      
+      <div id="currency">
+          <form id="currform">
+              <h2>Convert</h2>
+              <label class="input convert">amount:</label><input type="number" name="amount" id="amount" size="10" value="1"><br>
+              <label class="input convert">from:</label><input type="text" name="incur" id="incur" size="3" value="GBP"><br>
+              <label class="input convert">to:</label><input type="text" name="outcur" id="outcur" size="3" value="USD"><br>              
+              <label class="input convert"> &nbsp </label><button id="exchangebutton" onclick="convert(event)">convert</button>
+              <p></p>
+              <label class="convert">Result:</label><input type="text" name="myresult" id="myresult" class="output"><br>
+          </form>
+      </div> <!-- currency -->
+    </body>
+</html>
